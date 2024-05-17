@@ -20,6 +20,8 @@ function launchIntro() {
         scene.classList.add("hidden");
         setTimeout(() => {
           scene.classList.add("display-none");
+          document.html.classList.toggle("overflow-hd")
+          document.body.classList.toggle("overflow-hd")
         }, 3000);
       }, 3000);
     }, 10000);
