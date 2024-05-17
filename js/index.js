@@ -3,8 +3,8 @@ var video_tag = document.querySelector("#video");
 var scene_name = document.querySelector("#scene_name");
 var scene = document.querySelector("#scene");
 var audio = document.getElementById("audio");
-var html = document.querySelector(".html");
-var body = document.querySelector(".body");
+var html_class = document.querySelector(".html");
+var body_class = document.querySelector(".body");
 
 let playing = false
 let isVideoReady = false
@@ -22,8 +22,8 @@ function launchIntro() {
         scene.classList.add("hidden");
         setTimeout(() => {
           scene.classList.add("display-none");
-          html.classList.toggle("overflow-hd")
-          body.classList.toggle("overflow-hd")
+          html_class.classList.toggle("overflow-hd")
+          body_class.classList.toggle("overflow-hd")
         }, 3000);
       }, 3000);
     }, 10000);
