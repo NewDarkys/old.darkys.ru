@@ -4,11 +4,11 @@ html, body {
     flex-flow: column;
     height: 100%;
     background-color: rgb(255, 255, 255);
-    overflow: hidden !important;
+    overflow: hidden;
 }
 
 .overflow-hd {
-    overflow: auto;
+    overflow: auto !important;
 }
 
 header {
