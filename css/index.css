@@ -60,7 +60,7 @@ footer {
     height: 50px;
     flex: 0 1 auto;
 }
-body * {
+main, header, footer, body {
     transition: 0.33s;
 }
 main, header, footer, #scene {
