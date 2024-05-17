@@ -1,7 +1,28 @@
 html, body {
     height: 100%;
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    background-color: black !important;
 }
 
+@font-face {
+    font-family: "sspro";
+    src: url("../assets/fonts/SourceSansPro-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url(../assets/fonts/Nunito-VariableFont_wght.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Mukta';
+    src: url(../assets/fonts/Mukta-Medium.ttf) format('truetype');
+}
 
 @media (max-width : 400px) {
     #video_container {
@@ -11,6 +32,39 @@ html, body {
     #scene_name {
         font-size: 20px !important;
     }
+}
+
+header {
+    padding: 15px;
+    flex: 0 1 auto;
+}
+
+main {
+    height: 100%;
+    align-self: stretch;
+    flex: 1 1 auto;
+    color: aquamarine !important;
+    margin: 25px;
+}
+
+a {
+    color: aquamarine !important;
+}
+
+footer {
+    color: rgb(253, 249, 0) !important;
+    font-family: 'Nunito';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    flex: 0 1 auto;
+}
+body * {
+    transition: 0.33s;
+}
+main, header, footer, #scene {
+    animation: vertical-shaking .1s infinite;
 }
 #scene {
     width: 100%;
@@ -23,11 +77,6 @@ html, body {
     transition: 3s;
     z-index: 5;
 }
-
-.display-none {
-    display: none;
-}
-
 #video_container {
     height: 400px;
     position: absolute;
@@ -39,7 +88,6 @@ html, body {
     flex-direction: column;
     align-items: center;
 }
-
 #scene_name {
     color: #ffffff;
     font-family: Mukta;
@@ -47,11 +95,53 @@ html, body {
     margin-top: 20px;
     transition: 1s;
 }
-
 #video {
     height: 100%;
 }
-
 .hidden {
     opacity: 0 !important;
+}
+.IssuesButton {
+    position: absolute;
+    right: 5%;
+}
+.overflow-hd {
+    overflow: auto !important;
+}
+.display-none {
+    display: none;
+}
+.effect {
+    z-index: 999;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    opacity: .25;
+}
+.acryl {
+    filter: blur(10px);
+    height: 50px;
+    width: 100%;
+    background-color: rgba(131, 69, 247, 0.158);
+    margin-top: -50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    opacity: 0.5;
+    pointer-events: none;
+}
+.animated-gradient-black-red {
+    animation: animateBg 2s linear infinite;
+    background-image: linear-gradient(90deg,#f8eeea,#d3d4e6,#f8eeea,#d3d4e6);
+    background-size: 300% 100%;
+}
+@keyframes animateBg {
+  0% { background-position: 100% 0%; }
+  100% { background-position: 0% 0%; }
+}
+@keyframes vertical-shaking {
+    50% { transform: translateY(-.5px) }
+    100% { transform: translateY(.5px) }
 }
