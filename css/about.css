@@ -4,7 +4,7 @@ html, body {
     flex-flow: column;
     height: 100%;
     background-color: rgb(255, 255, 255);
-    overflow: hidden;
+    overflow: auto;
 }
 
 header {
